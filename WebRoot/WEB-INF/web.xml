@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>MyFilstStrurs</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <!-- 
+  <filter>
+	<filter-name>struts2</filter-name>
+	<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+</filter>
+	<filter-mapping>
+		<filter-name>struts2</filter-name>
+		 /*表示所有的请求都应该过struts2框架,但是默认情况下(不配置/*的情况下)只有两种情况可以过struts2框架
+		 分别是/XXX,/XXX.action 
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	 -->
+	 <servlet>
+	 <servlet-name>PreServlet</servlet-name>
+	 <servlet-class>com.preson.controller.PreServlet</servlet-class>
+	 </servlet>
+	 <servlet-mapping>
+	 <servlet-name>PreServlet</servlet-name>
+	 <url-pattern>/servlet/PreServlet</url-pattern>
+	 </servlet-mapping>
+</web-app>

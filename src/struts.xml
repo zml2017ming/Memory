@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+<!-- package里面的name必需的,他指定的是该包的名字,默认是default; namespace可选属性,表示该包命名空间默认情况下是"/" extends表示该包继承于其他的包 -->
+<package name="default" namespace="/" extends="struts-default">
+<!-- action里面的name代表的是请求url名字  class代表acction对应的action类  ,method代表后台对应的方法 -->
+	<action name="helloword" class="com.HelloAction" method="helloword">
+	<!-- result标签是在action标签里面的 -->
+		<result name="success">/text.jsp</result>
+		<result name="mychina">/demo.jsp</result>
+	</action>
+	
+	<action name="text" class="com.HelloAction" method="hellochina">
+		<result name="china">/demo.jsp</result>
+	</action>
+	
+	<action name="getAll" class="com.HelloAction" method="getAllUser">
+	<result name="">/jsps/show.jsp</result>
+	</action>
+</package>
+
+</struts>
